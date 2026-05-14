@@ -115,46 +115,51 @@ nav a:hover {
 }
 
 /* Button System */
-.btn {
-    padding: 1rem 2.5rem;
-    border-radius: 50px;
-    font-weight: 600;
-    text-decoration: none;
-    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    display: inline-block;
-    text-align: center;
-    border: none;
+a.btn {
+    padding: 1.2rem 2.8rem !important;
+    border-radius: 50px !important;
+    font-weight: 700 !important;
+    text-decoration: none !important;
+    transition: all 0.3s ease !important;
+    display: inline-block !important;
+    text-align: center !important;
+    border: none !important;
+    font-size: 0.9rem !important;
+    letter-spacing: 1px !important;
+    text-transform: uppercase !important;
 }
 
-.btn-primary {
-    background: linear-gradient(45deg, var(--primary), var(--secondary));
-    color: white;
-    box-shadow: 0 10px 20px rgba(0, 242, 255, 0.2);
+a.btn-primary {
+    background: linear-gradient(45deg, var(--primary), var(--secondary)) !important;
+    color: #ffffff !important;
+    box-shadow: 0 10px 25px rgba(0, 242, 255, 0.3) !important;
 }
 
-.btn-primary:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(0, 242, 255, 0.4);
-    filter: brightness(1.1);
+a.btn-primary:hover {
+    transform: translateY(-5px) scale(1.02) !important;
+    box-shadow: 0 20px 40px rgba(0, 242, 255, 0.5) !important;
 }
 
-.btn-outline {
-    border: 1px solid var(--glass-border);
-    color: white;
-    backdrop-filter: blur(10px);
-    background: rgba(255, 255, 255, 0.05);
+a.btn-outline {
+    border: 2px solid var(--primary) !important;
+    color: #ffffff !important;
+    background: rgba(0, 242, 255, 0.1) !important;
+    backdrop-filter: blur(10px) !important;
 }
 
-.btn-outline:hover {
-    background: var(--glass-border);
-    transform: translateY(-5px);
-    border-color: var(--primary);
+a.btn-outline:hover {
+    background: var(--primary) !important;
+    color: #000000 !important;
+    transform: translateY(-5px) !important;
 }
 
 .cta-group {
     display: flex;
-    gap: 1.5rem;
+    gap: 2rem;
     justify-content: center;
+    margin-top: 2rem;
+    position: relative;
+    z-index: 10;
 }
 
 /* Hero Section */
