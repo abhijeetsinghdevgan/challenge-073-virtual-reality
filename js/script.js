@@ -19,6 +19,14 @@ document.addEventListener('DOMContentLoaded', () => {
             const moveX = (x - centerX) / 50;
             const moveY = (y - centerY) / 50;
             heroImg.style.transform = `rotateY(${moveX}deg) rotateX(${-moveY}deg)`;
+            
+            // HUD Parallax
+            document.querySelectorAll('.hud-element').forEach((hud, index) => {
+                const speed = (index + 1) * 20;
+                const hX = (x - centerX) / speed;
+                const hY = (y - centerY) / speed;
+                hud.style.transform = `translate3d(${hX}px, ${hY}px, 0)`;
+            });
         }
     });
 
@@ -74,5 +82,26 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             }
         });
+    });
+
+    // Reveal Animations on Scroll
+    const observerOptions = {
+        threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('section, .card, .gesture-item').forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(30px)';
+        el.style.transition = 'all 0.8s cubic-bezier(0.2, 1, 0.3, 1)';
+        observer.observe(el);
     });
 });

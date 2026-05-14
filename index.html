@@ -49,8 +49,13 @@
             
             <div class="vr-visual">
                 <div class="vr-image-container">
-                    <!-- High quality VR Headset placeholder -->
+                    <!-- HUD Elements -->
+                    <div class="hud-element hud-1"><i class="fas fa-crosshairs"></i></div>
+                    <div class="hud-element hud-2">SCANNING...</div>
+                    <div class="hud-element hud-3"><span>FOV 120°</span></div>
+                    
                     <img src="https://images.unsplash.com/photo-1622979135225-d2ba269cf1ac?auto=format&fit=crop&q=80&w=1000" alt="Futuristic VR Headset" id="hero-img">
+                    
                     <div class="gesture-indicator">
                         <i class="fas fa-hand-sparkles"></i>
                         <span>Gesture Control Active</span>
@@ -59,24 +64,86 @@
             </div>
         </section>
 
+        <section class="gestures-gallery" id="controls">
+            <h2 class="section-title">Natural Interaction</h2>
+            <div class="gesture-grid">
+                <div class="gesture-item">
+                    <div class="gesture-icon"><i class="fas fa-hand-pointer"></i></div>
+                    <h4>Air Tap</h4>
+                    <p>Select objects by simply tapping the air. Precise haptic feedback simulated via neural link.</p>
+                </div>
+                <div class="gesture-item">
+                    <div class="gesture-icon"><i class="fas fa-arrows-up-down-left-right"></i></div>
+                    <h4>Spatial Swipe</h4>
+                    <p>Navigate menus with fluid hand sweeps. Small gestures, infinite movement.</p>
+                </div>
+                <div class="gesture-item">
+                    <div class="gesture-icon"><i class="fas fa-expand-arrows-alt"></i></div>
+                    <h4>Pinch Zoom</h4>
+                    <p>Manipulate 3D data with natural pinch-to-zoom gestures. No controllers required.</p>
+                </div>
+            </div>
+        </section>
+
         <section class="features" id="hardware">
-            <div class="card" id="card-1">
-                <i class="fas fa-microchip"></i>
-                <h3>Neural Processor</h3>
-                <p>Zero-latency tracking with our proprietary M2-Vision chip. Every movement translated instantly.</p>
+            <h2 class="section-title">The Power Within</h2>
+            <div class="card-grid">
+                <div class="card" id="card-1">
+                    <i class="fas fa-microchip"></i>
+                    <h3>Neural Processor</h3>
+                    <p>Zero-latency tracking with our proprietary M2-Vision chip. Every movement translated instantly.</p>
+                </div>
+                <div class="card" id="card-2">
+                    <i class="fas fa-eye"></i>
+                    <h3>Retina+ Display</h3>
+                    <p>8K resolution per eye with a 144Hz refresh rate for crystal clear immersion without the motion sickness.</p>
+                </div>
+                <div class="card" id="card-3">
+                    <i class="fas fa-battery-full"></i>
+                    <h3>All-Day Life</h3>
+                    <p>Revolutionary solid-state battery tech providing up to 8 hours of standalone wireless usage.</p>
+                </div>
             </div>
-            <div class="card" id="card-2">
-                <i class="fas fa-eye"></i>
-                <h3>Retina+ Display</h3>
-                <p>8K resolution per eye with a 144Hz refresh rate for crystal clear immersion without the motion sickness.</p>
+        </section>
+
+        <section class="specs-table" id="specs">
+            <div class="specs-container">
+                <h3>Technical Specifications</h3>
+                <div class="spec-row">
+                    <span>Display</span>
+                    <span>Dual 4K Micro-OLED @ 144Hz</span>
+                </div>
+                <div class="spec-row">
+                    <span>Tracking</span>
+                    <span>Inside-out 6DOF + Eye Tracking</span>
+                </div>
+                <div class="spec-row">
+                    <span>Audio</span>
+                    <span>Spatial Audio with Dynamic Head Tracking</span>
+                </div>
+                <div class="spec-row">
+                    <span>Connectivity</span>
+                    <span>Wi-Fi 7, Bluetooth 5.4, USB-C 4.0</span>
+                </div>
             </div>
-            <div class="card" id="card-3">
-                <i class="fas fa-hand-pointer"></i>
-                <h3>Intuitive Gestures</h3>
-                <p>No controllers needed. Natural hand movements allow for seamless navigation in complex environments.</p>
+        </section>
+
+        <section class="newsletter">
+            <div class="newsletter-card">
+                <h2>Join the Revolution</h2>
+                <p>Be the first to know when we launch and get exclusive early access to the Aether ecosystem.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
             </div>
         </section>
     </main>
+
+    <footer style="padding: 4rem 5%; text-align: center; border-top: 1px solid var(--glass-border);">
+        <div class="logo" style="margin-bottom: 1rem;">AETHER</div>
+        <p style="color: var(--text-dim); font-size: 0.9rem;">&copy; 2026 Aether Technologies. All rights reserved.</p>
+    </footer>
 
     <script src="js/script.js"></script>
 </body>
